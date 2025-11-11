@@ -1,0 +1,185 @@
+:root {
+  --bg: #0f1115;
+  --card: #121318;
+  --muted: #9aa0a6;
+  --accent: #6c7cff;
+  --glass: rgba(255,255,255,0.03);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: linear-gradient(180deg, #0b0c0f 0%, #0f1115 60%);
+  color: #e9eef8;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---------------- HEADER ---------------- */
+.dark-header {
+  background: transparent;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+/* ---------------- HOME PAGE ---------------- */
+.dark-card {
+  background: #fff; /* white card background */
+  color: #000;      /* black text */
+  border-radius: 14px;
+  padding: 1rem;
+  height: 100%;      /* make card take full height of container */
+  display: flex;
+  flex-direction: column;
+}
+
+.dark-card .card-title {
+  color: #000;
+  font-weight: 600;
+}
+
+.dark-card .card-text {
+  color: #333;
+}
+
+.dark-card .btn-outline-light {
+  color: #000;
+  border-color: #000;
+}
+
+.dark-card .btn-outline-light:hover {
+  background: #000;
+  color: #fff;
+}
+
+.dark-card .btn-primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* ---------------- HOME DESTINATION CARDS ---------------- */
+.small-card {
+  border-radius: 14px;
+  overflow: hidden;
+  height: 100%;       /* make all cards same height */
+  display: flex;
+  flex-direction: column;
+}
+
+.small-card img {
+  width: 100%;
+  height: 200px;      /* uniform image height */
+  object-fit: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+.small-card .card-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Hover effect */
+.hover-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* Section spacing */
+section {
+  margin-bottom: 3rem;
+}
+
+.row.g-3 {
+  --bs-gutter-x: 1rem;
+  --bs-gutter-y: 1rem;
+}
+
+/* ---------------- BUTTONS ---------------- */
+.btn-primary {
+  background: var(--accent);
+  border: 1px solid rgba(108,124,255,0.2);
+  box-shadow: 0 6px 18px rgba(108,124,255,0.06);
+}
+
+.btn-gradient {
+  background: linear-gradient(90deg, #6c7cff, #4e5bff);
+  border: none;
+  color: #fff;
+  transition: 0.3s ease;
+}
+
+.btn-gradient:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 15px rgba(108,124,255,0.4);
+}
+
+/* ---------------- INPUT FIELDS ---------------- */
+.form-control {
+  border-radius: 50px !important;
+  padding: 1rem !important;
+}
+
+/* Text link color override */
+.text-primary {
+  color: #4e5bff !important;
+}
+
+/* ---------------- LOGIN PAGE BACKGROUND ---------------- */
+.login-bg {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.login-bg::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("https://media.istockphoto.com/id/615236798/photo/tokyo-tower-night-view-of-tokyo-metropolitan-city.jpg?s=612x612&w=0&k=20&c=evXG6kRJ34pwbpJpV0qkW5CnwmEf_-4V6Ec_HdXner8=") center/cover no-repeat;
+  filter: blur(2px);
+  opacity: 0.3;
+  z-index: 0;
+}
+
+/* Overlay and login card above the image */
+.overlay {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.login-card {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------- FOOTER LINKS ---------------- */
+footer a {
+  color: #ffffff !important;  /* white font */
+}
+
+footer a:hover {
+  color: #6c7cff !important;  /* hover accent color */
+}
+
+/* ---------------- MISC ---------------- */
+.text-muted {
+  color: var(--muted) !important;
+}
